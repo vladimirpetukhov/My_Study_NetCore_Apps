@@ -1,0 +1,33 @@
+﻿<h1 class="text-center text-musaca">All Products</h1>
+<table class="table table-striped table-hover">
+    <tr>
+        <th>#</th>
+        <th>Product ID</th>
+        <th>Name</th>
+        <th>Barcode</th>
+        <th>Price</th>
+        <th>Image</th>
+        <th></th>
+        <th></th>
+    </tr>
+    @for(int i = 0; i < Model.Products.Count(); i++)
+    {
+    { var number = i + 1; }
+    { var product = Model.Products.ToList()[i];}
+    { var image=@product.Picture;}
+    @if(string.IsNullOrEmpty(@image)){
+    {@image="http://www.cambridge-steel.com/public/images/images-empty.png";}
+    }
+    <tr>
+        <td>@number</td>
+        <td>@product.Id</td>
+        <td>@product.Name</td>
+        <td>@product.Barcode</td>
+        <td>@product.Price</td>
+        <td><img src="@image" /></td>
+        <td><a class="btn bg-musaca text-white" href="/products/edit?id=@product.Id">EDIT</a></td>
+        <td><a class="btn chushka-bg-color" href="/products/delete?id=@product.Id">DELETE</a></td>
+    </tr>
+    }
+</table>
+<br />

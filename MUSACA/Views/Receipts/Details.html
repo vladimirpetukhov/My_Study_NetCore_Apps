@@ -1,0 +1,40 @@
+﻿{ var orders=Model.Orders;}
+{ var total = Model.Orders.Sum(x => x.Total);}
+
+<h2 class="d-flex justify-content-center text-musaca">Receipt Details</h2>
+
+<hr class="hr-2" />
+<br />
+<div>
+    <table class="table">
+        <tbody>
+            @foreach(var order in orders){
+            <tr class="d-flex justify-content-center col-md-12">
+                <td class="col-md-2">@order.ProductName</td>
+                <td class="col-md-1 text-right">x@order.Quantity</td>
+                <td class="col-md-1 text-right">@order.Total</td>
+            </tr>
+            }
+        </tbody>
+        <tfoot>
+            <tr class="d-flex justify-content-center col-md-12">
+                <td class="col-md-2"><h6>Total</h6></td>
+                <td class="col-md-2 text-right"><h6>@total</h6></td>
+            </tr>
+            <tr class="d-flex justify-content-center col-md-12">
+                <td class="col-md-2"><h6>Issued On</h6></td>
+                <td class="col-md-2 text-right"><h6>@Model.IssuedOn</h6></td>
+            </tr>
+            <tr class="d-flex justify-content-center col-md-12">
+                <td class="col-md-2"><h6>Cashier</h6></td>
+                <td class="col-md-2 text-right"><h6>@Model.Cashier</h6></td>
+            </tr>
+            <tr class="d-flex justify-content-center col-md-12">
+                <td class="col-md-2"><h6>Receipt</h6></td>
+                <td class="col-md-2 text-right"><h6>@Model.Id</h6></td>
+            </tr>
+            
+        </tfoot>
+    </table>
+</div>
+<hr class="hr-2" />

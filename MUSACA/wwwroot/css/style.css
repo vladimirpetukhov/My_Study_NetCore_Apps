@@ -1,0 +1,147 @@
+.bg-musaca {
+    background-color: #09a816;
+    color: #000000;
+}
+.bg-compot {
+    background-color: #09a816;
+    color: #000000;    
+    outline-color:yellow;
+    outline-width:1px;
+}
+
+.div-musaca {
+    border-top: 1px solid #09a816;
+    border-bottom: 1px solid #09a816;
+}
+
+
+.text-musaca {
+    color: #32CD32;
+}
+
+.text-musaca2 {
+    color: #32CD32;
+    font-size:26px;
+    margin-right:1px;
+    
+}
+
+.border-musaca {
+    border: 3px solid #32CD32;
+    border-radius: 5px;
+}
+
+.nav-link-white {
+    color: #FFFFFF;
+}
+
+.hr-2 {
+    height: 5px;
+}
+
+a {
+    text-underline: none;
+}
+
+a:hover {
+    outline: none;
+    text-decoration: none;
+}
+
+th{
+    background-color:black;
+    color:white;
+}
+
+.th-2 {
+    background-color: #abfa6e;
+    color: black;
+}
+tr {
+    margin-right: 0 !important;
+    margin-left: 0 !important;
+    border-color: #09a816;
+}
+
+.chushka-bg-color {
+    background-color: red;
+    color: white;
+}
+
+textarea {
+    resize: none;
+}
+
+img {
+    width: 100px !important;
+    height: 100px !important;
+}
+
+.img-2 {
+    width: 200px !important;
+    height: 200px !important;
+}
+
+.my-tbody {
+    height: 30px;
+    display: block;
+    overflow-y: scroll;
+    width: 100%;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    border: 0;
+    width: 98%;
+}
+
+.btn-big{
+    stroke-width:100%;
+}
+.chushka-bg-color {
+    background-color: red;
+    color: white;
+}
+
+.text-chushka {
+    color: red;
+}
+
+
+.hr-3 {
+    height: 3px;
+}
+
+.btn-order {
+    background-color: white;
+    color: #09a816;
+    outline-color: #09a816;
+    border-color: #09a816;       
+}
+
+.text-cucumber {
+    color: #09a816;
+    font-size:medium;
+}
+.label-outline {
+    color: #09a816;
+    
+}
+
+.table-profile {
+    
+}
+
+.td-profile {
+    line-height: 35px;
+}
+.button2:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 25px 50px 0 rgba(0,0,0,0.19);
+    background-color: #09a816;
+    color: white;
+    width:75px;
+}
+.psolid {
+    border-style: solid;
+}

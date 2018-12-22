@@ -1,0 +1,48 @@
+﻿{var total=Model.Orders.Select(sum=> sum.Total).Sum();}
+<form class="w-50 mt-12" method="post" action="/Orders/Order">
+    <div class="d-flex justify-content-start mt-12">
+        <div class="btn-order p-2 mr-3 ml-3" style="color:#09a816;">
+            <button type="button" class="btn btn-outline-success" disabled>Product</button>
+        </div>
+        <div class="p-2 w-50 ml-3">
+            <input type="number" class="form-control" id="barcode" placeholder="Barcode..." name="barcode">
+        </div>
+        <div class="p-2 w-50 ml-3">
+            <input type="number" class="form-control" id="quantity" placeholder="Quantity..." name="quantity">
+        </div>
+        <div class="button-holder p-2 ml-3">
+            <button type="submit" class="btn bg-musaca text-white">Order</button>
+        </div>
+    </div>
+</form>
+<hr class=" hr-3 " />
+<div class="justify-content-start">
+    <table class="table">
+        <thead>
+            <tr>
+                <th class="col-md-5">Product Name</th>
+                <th class="col-md-4">Quantity</th>
+                <th class="col-md-4">Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach(var order in Model.Orders)
+            {
+            <tr>
+                <td>@order.ProductName</td>
+                <td>@order.Quantity</td>
+                <td>@order.Total</td>
+            </tr>
+            }
+        </tbody>
+    </table>
+</div>
+<hr class="hr-2" />
+<div class="d-flex justify-content-between mt-12">
+    <div class="button-holder p-2 ml-3">
+        <a class="btn bg-musaca text-white" href="/orders/cashout">Cashout</a>
+    </div>
+    <div class="p-2">
+        <h3>Total:&nbsp;@total</h3>
+    </div>
+</div>
